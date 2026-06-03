@@ -1,0 +1,35 @@
+{
+  "servers": [
+    {
+      "id": "github",
+      "name": "GitHub MCP Server",
+      "description": "Official GitHub-hosted MCP server for repos, PRs, and CI",
+      "type": "remote",
+      "url": "https://api.githubcopilot.com/mcp/"
+    },
+    {
+      "id": "playwright",
+      "name": "Playwright MCP Server",
+      "description": "Browser automation and testing via Playwright",
+      "type": "npm",
+      "package": "@microsoft/mcp-server-playwright"
+    },
+    {
+      "id": "filesystem",
+      "name": "Local File System",
+      "description": "Read-only access to local files",
+      "type": "npm",
+      "package": "@modelcontextprotocol/server-filesystem",
+      "config": {
+        "readonly": true
+      }
+    },
+    {
+      "id": "internal-api",
+      "name": "Internal API Server",
+      "description": "Company internal APIs (read-only)",
+      "type": "remote",
+      "url": "https://mcp.internal.company/api/mcp"
+    }
+  ]
+}
